@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.playerNames {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+.playerNames>* {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+}
+
+#Xname {
+    text-align: right;
+    border-right: .5vh solid black;
+    color: green;
+}
+
+.playerScore {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 8vh;
+    margin-top: 2vh;
+}
+
+.playerScore>* {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+}
+
+#Xscore {
+    text-align: right;
+    border-right: .5vh solid black;
+}
+
+.grid-container {
+    width: 240px;
+    height: 240px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+
+}
+
+.grid-item {
+    height: 80px;
+    width: 80px;
+    color: white;
+    background-color: olive;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+[data-target="0"],
+[data-target="8"] {
+    border-radius: 0 25px;
+}
+
+[data-target="2"],
+[data-target="6"] {
+    border-radius: 25px 0;
+}
+
+.btnsContainer {
+    width: 60%;
+    position: relative;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.button {
+    width: 120px;
+    height: 50px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.setGame {
+    width: 600px;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.setGame.deactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#infoWrapper {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    flex-direction: row;
+    color: white;
+    background-color: rgb(105, 0, 128);
+    font-weight: 700;
+}
+
+#play {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(105, 0, 128);
+    color: white;
+    border: none;
+    box-shadow: 2px 2px white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    /* margin-left: 5px; */
+    outline: none;
+    height: 25px;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.playerInfoB {
+    border-left: 2px solid black;
+    padding-left: 15px;
+}
+
+#markerA,
+#markerB {
+    width: 30px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.overlay {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: 200ms ease-in-out;
+    pointer-events: all;
+}
+
+.overlay.deactive {
+    opacity: 0;
+    pointer-events: none;
+}

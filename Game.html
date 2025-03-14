@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Game.css">
+    <title>Document</title>
+    <script defer src="./Game.js"></script>
+</head>
+
+<body>
+
+    <h1 class="title">Tic Tac Toe</h1>
+    <div class="playerNames">
+        <div class="names" id="Xname">Player 1</div>
+        <div class="names" id="Oname">Player 2</div>
+    </div>
+
+    <div class="playerScore">
+        <div class="score" id="Xscore">0</div>
+        <div class="score" id="Oscore">0</div>
+    </div>
+
+    <div class="grid-container">
+        <button data-target="0" class="grid-item"></button>
+        <button data-target="1" class="grid-item"></button>
+        <button data-target="2" class="grid-item"></button>
+        <button data-target="3" class="grid-item"></button>
+        <button data-target="4" class="grid-item"></button>
+        <button data-target="5" class="grid-item"></button>
+        <button data-target="6" class="grid-item"></button>
+        <button data-target="7" class="grid-item"></button>
+        <button data-target="8" class="grid-item"></button>
+    </div>
+
+    <div class="btnsContainer">
+        <button class="button" id="restart">New Game</button>
+        <button class="button" id="reset">Reset</button>
+        <button class="button" id="endgame">Check Win</button>
+    </div>
+
+    <div id="setGame" class="setGame ">
+        <h1>Player Info</h1>
+
+        <div id="infoWrapper">
+            <div class="playerInfo">
+                <label for="playerA">Player 1:</label>
+                <input type="text" id="playerA"><br><br>
+                <!-- <label for="markerA">Marker:</label>
+                <input type="text" id="markerA"> -->
+            </div>
+            <div class="playerInfoB">
+                <label for="playerB">Player 2:</label>
+                <input type="text" id="playerB"><br><br>
+                <!-- <label for="markerB">Marker:</label>
+                <input type="text" id="markerB"> -->
+            </div>
+        </div>
+        <button id="play">Play-Game</button>
+    </div>
+
+    <div id="overlay" class="overlay "></div>
+
+</body>
+
+</html>
