@@ -241,6 +241,13 @@ input {
         height: 25px;
         font-size: 14px;
     }
+
+    .playerInfoB {
+        border-left: none;
+        padding-left: 15px;
+        padding-top: 15px;
+        border-top: 2px solid black;
+    }
 }
 
 @media (max-width: 480px) {
@@ -264,7 +271,9 @@ input {
     }
 
     .btnsContainer {
+        justify-content: center;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
